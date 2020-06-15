@@ -1,0 +1,378 @@
+1. Sum of 2numbers
+-------------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var a = userInput[0]; 
+var b = userInput[1];
+console.log(+a + +b)
+});
+
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+
+2. Area of rectangle
+-------------------------------------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var a = userInput[0]; 
+var b = userInput[1];
+console.log(+a*+b)
+});
+
+
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+3.Largest of 3 numbers
+------------------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var a = +userInput[0]; 
+var b = +userInput[1];
+var c = +userInput[2];
+if(a>b && a>c){
+  console.log(a)
+}
+else if (b>a && b>c){
+  console.log(b)
+}else{
+  console.log(c)
+}
+
+});
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+4.Circumference of a circle (Round off to 2 decimal places)
+
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var a = +userInput[0]; 
+var circum = 2 * 3.141592653589793238 * a;
+if (circum > 0){
+	console.log(Math.round(circum*100)/100);
+} else{
+  	console.log("Error");
+}
+});
+
+---------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+5. Factorial
+------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var a = +userInput[0]; 
+if (a == 0 || a==1) {
+	console.log(1);
+}else{
+mul = a;
+for (var i = a-1;i > 0;i--){
+mul *= i;
+}
+  console.log(mul);
+}  
+});
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+6. Celcius to fahrenheit
+------------------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var a = +userInput[0]; 
+console.log(Math.round((a*1.8+32)*100)/100)  
+});
+
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+7. KM to Meters and Centimeters
+---------------------------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var a = +userInput[0]; 
+console.log(a*1000);//meters 
+console.log(a*100000);// Centimeters
+});
+
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+8. Remove whitespaces
+----------------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var A = userInput[0];
+var count = 0;
+for(var i =0; i<A.length;i++){
+if (A[i] != " ")
+{
+  count += 1;
+} 
+}
+console.log(count)
+});
+
+
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+10. Smallest of 2 numbers
+---------------------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var a = +userInput[0].split(" ")[0]; 
+var b = +userInput[0].split(" ")[1];
+if(a<b){
+  console.log(a)
+}
+else{
+  console.log(b)
+}
+
+});
+
+-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
+11. Find Nth in the series : 1, 4, 9, 16, 25, 36, 49, 64, 81, .......
+
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var a = +userInput[0];
+console.log(a*a)
+});
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+12. Area of Equilateral Triangle
+---------------------------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var a = +userInput[0];
+var Area = (Math.pow(3,1/2)* a * a)/4
+//var Area = (Math.sqrt(3)* a * a)/4
+console.log(Math.round(Area*100)/100)
+});
+
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+13. Leap Year
+--------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var year = +userInput[0];
+if (year%400 == 0 || (year%4 ==0 && year%100 !=0)){
+	console.log("Y")
+}else{
+	console.log("N")
+}
+});
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+
+14. Print 3 Multiples of given number 
+--------------------------------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var a = +userInput[0];
+console.log(a*1+" "+a*2+" "+a*3 )
+});
+
+
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+15. print the table of 9 till N 
+----------------------------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var a = +userInput[0];
+var arr = []
+for (var i=1;i<=a;i++){
+	arr.push(i*9)
+}
+console.log(arr.join(" "))
+});
+
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+16. Even / Odd / Zero 
+----------------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var a = +userInput[0];
+if (a == 0){
+ console.log("Zero")
+}else if (a%2 == 0){
+ console.log("Even") 
+}else
+{
+  console.log("Odd")
+}
+});
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+17. Simple Interest
+----------------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var p = +userInput[0].split(" ")[0];
+var n = +userInput[0].split(" ")[1];
+var r = +userInput[0].split(" ")[2];
+var SI = p*n*r/100
+console.log(Math.round(SI * 100)/100)
+});
+-------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+18. Print the number of days in the month corresponding to given number
+------------------------------------------------------------------------
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var month = +userInput[0];
+if (month<1 || month>12){
+  	console.log("Error");}
+ else{
+	var arr = [31,28,31,30,31,30,31,31,30,31,30,31];
+	console.log(arr[month-1]);
+ }
+});
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+19. Find roots of the quadratic.
+
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+var a = +userInput[0].split(" ")[0];
+var b = +userInput[0].split(" ")[1];
+var c = +userInput[0].split(" ")[2];
+var X = (-b + Math.sqrt((b*b - 4*a*c))) / (2 * a)
+var Y = (-b - Math.sqrt((b*b - 4*a*c))) / (2 * a)
+console.log((Math.round(X * 100)/100).toFixed(2))
+console.log((Math.round(Y * 100)/100).toFixed(2))
+});
+
+-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
